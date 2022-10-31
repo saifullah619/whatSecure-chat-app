@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/searchbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Search your messages..."
+        android:layout_height="wrap_content"/>
+
+    <ListView
+        android:id="@+id/listView"
+        app:layout_constraintTop_toBottomOf="@id/searchbar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="350dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/listView"
+        android:layout_marginTop="30dp"
+        android:id="@+id/editText"
+        android:hint="Type your Message here..."
+        android:inputType="textMultiLine"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:text="SEND"
+        android:id="@+id/button"
+        android:onClick="sendButton"
+        app:layout_constraintTop_toBottomOf="@id/editText"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
